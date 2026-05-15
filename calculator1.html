@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: aquamarine;
+        display: flex;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+    .cal{
+        background-color: beige;
+        padding: 15px;
+        border-radius: 20px;
+        width: 220px;
+        text-align: center;
+    }
+    input{
+        width: 95%;
+        height: 35px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        text-align: right;
+    }
+    button{
+        width: 45px;
+        height: 45px;
+        margin: 3px;
+        border-radius: 40%;
+        background-color: rgba(215, 250, 215, 0.842);
+        font-size: 18px;
+    }
+    .oper{
+            background-color: #ffb703;
+        color: white ;
+    }
+    .clear{
+        background-color: red;
+    }
+    .equal{
+        background-color: aqua;
+    }
+</style>
+<body>
+    <div class="cal">
+  <input type="text" id="display" disabled>
+         <button onclick="appendValue('7')">7</button>
+         <button onclick="appendValue('8')">8</button>
+         <button onclick="appendValue('9')">9</button>
+         <button class="equal" onclick="calculate()">=</button>
+         <button onclick="appendValue('4')">4</button>
+         <button onclick="appendValue('5')">5</button>
+         <button onclick="appendValue('6')">6</button>
+         <button class="clear" onclick="clearDisplay()">C</button>
+         <button onclick="appendValue('1')">1</button>
+         <button onclick="appendValue('2')">2</button>
+         <button onclick="appendValue('3')">3</button>
+         <button onclick="appendValue('0')">0</button>
+         <button class="oper" onclick="appendValue('*')">*</button>
+         <button class="oper" onclick="appendValue('+')">+</button>
+         <button class="oper" onclick="appendValue('-')">-</button>
+         <button class="oper" onclick="appendValue('/')">/</button>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
